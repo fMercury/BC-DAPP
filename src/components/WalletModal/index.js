@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { isMobile } from 'react-device-detect';
-import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core';
 import { observer } from 'mobx-react';
 import { URI_AVAILABLE } from '@web3-react/walletconnect-connector'
 
@@ -17,7 +16,6 @@ import { injected, walletconnect, SUPPORTED_WALLETS } from 'provider/connectors'
 import { useStores } from 'contexts/storesContext';
 import {
     isChainIdSupported,
-    web3ContextNames,
 } from '../../provider/connectors';
 import { useActiveWeb3React } from 'provider/providerHooks';
 

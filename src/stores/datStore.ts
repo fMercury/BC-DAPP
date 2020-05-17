@@ -113,16 +113,16 @@ export default class DatStore {
     }
 
     isInitPhase(datAddress: string) {
-        return this.getState(datAddress) == DatState.STATE_INIT;
+        return this.getState(datAddress) === DatState.STATE_INIT;
     }
     isRunPhase(datAddress: string) {
-        return this.getState(datAddress) == DatState.STATE_RUN;
+        return this.getState(datAddress) === DatState.STATE_RUN;
     }
     isCancelled(datAddress: string) {
-        return this.getState(datAddress) == DatState.STATE_CANCEL;
+        return this.getState(datAddress) === DatState.STATE_CANCEL;
     }
     isClosed(datAddress: string) {
-        return this.getState(datAddress) == DatState.STATE_CLOSE;
+        return this.getState(datAddress) === DatState.STATE_CLOSE;
     }
 
     getState(datAddress: string): DatState | undefined {

@@ -1,10 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import styled from 'styled-components';
-import ActiveButton from '../common/ActiveButton';
-import InactiveButton from '../common/InactiveButton';
 import { useStores } from '../../contexts/storesContext';
-import { formatBalance } from '../../utils/token';
 import Web3ConnectStatus from '../Web3ConnectStatus';
 
 
@@ -35,20 +32,10 @@ const DisconnectedMessage = styled.div`
 
 const SellDisconnected = observer((props) => {
     const {
-        root: { tradingStore },
+        root: {  },
     } = useStores();
 
-    const Button = ({ active, children, onClick }) => {
-        if (active === true) {
-            return (
-                <ActiveButton onClick={onClick}>{children}</ActiveButton>
-            );
-        } else {
-            return (
-                <InactiveButton>{children}</InactiveButton>
-            );
-        }
-    };
+
 
     return (
         <FormWrapper>

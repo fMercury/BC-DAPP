@@ -70,10 +70,6 @@ const TableCell = styled.div`
     font-weight: ${(props) => props.weight};
 `;
 
-const TableCellType = styled(TableCell)`
-    text-align: left;
-`;
-
 const TradingHistory = observer(() => {
     const {
         root: { tradingStore, configStore },

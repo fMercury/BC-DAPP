@@ -3,12 +3,10 @@ import styled from 'styled-components';
 import { observer } from 'mobx-react';
 import { shortenAddress } from 'utils/address';
 import WalletModal from 'components/WalletModal';
-import { Spinner } from 'theme';
-import Circle from 'assets/images/circle.svg';
+
 import {
     injected,
     isChainIdSupported,
-    web3ContextNames,
     walletconnect
 } from 'provider/connectors';
 import Identicon from '../Identicon';
@@ -40,10 +38,6 @@ const WrongNetworkButton = styled.button`
     :focus {
         outline: none;
     }
-`;
-
-const SpinnerWrapper = styled(Spinner)`
-    margin: 0 0.25rem 0 0.25rem;
 `;
 
 const Web3ConnectStatus = observer((props) => {
@@ -84,7 +78,6 @@ const Web3ConnectStatus = observer((props) => {
     } = useStores();
     const {
         chainId,
-        active,
         account,
         connector,
         error,
