@@ -121,7 +121,7 @@ export default class TokenStore {
         tokenAddress,
         spender
     ): PromiEvent<any> => {
-        const { providerStore, tradingStore } = this.rootStore;
+        const { providerStore } = this.rootStore;
         return providerStore.sendTransaction(
             web3React,
             ContractType.ERC20,

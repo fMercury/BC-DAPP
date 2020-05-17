@@ -1,7 +1,5 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import ActiveButton from '../common/ActiveButton';
-import InactiveButton from '../common/InactiveButton';
 import BuyInput from './BuyInput';
 import BuySign from '../Buy/BuySign';
 import BuyUnconfirmed from '../Buy/BuyUnconfirmed';
@@ -24,14 +22,6 @@ const BuyForm = observer(() => {
 
     const infotext = 'Buy Amount';
     const count = tradingStore.buyingState;
-    
-    const Button = ({ active, children, onClick }) => {
-        if (active === true) {
-            return <ActiveButton onClick={onClick}>{children}</ActiveButton>;
-        } else {
-            return <InactiveButton>{children}</InactiveButton>;
-        }
-    };
 
     const Content = ({ contentCount }) => {
         let contentState;

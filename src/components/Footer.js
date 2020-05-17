@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { contracts } from '../config/contracts';
 import { DEFAULT_ETH_NETWORK } from '../provider/connectors';
-import { etherscanAddress, etherscanToken } from 'utils/etherscan';
+import { etherscanAddress } from 'utils/etherscan';
 import { useStores } from '../contexts/storesContext';
 
 const FooterWrapper = styled.div`
